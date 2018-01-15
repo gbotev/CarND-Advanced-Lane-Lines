@@ -112,7 +112,7 @@ This is encapsulated in the Line class. By using the x and y lane coordinates fo
 
 The position of the vehicle and the displayed curvature are computed in the add_text() function which computes:
 
-* the off center position as ((right fitx at the bottom - left fitx at the bottom) - 1280) / 2 and calibrates it using the meters per pixel values which in my case are approximately xm_per_pix=0.0062, ym_per_pix=0.035.
+* the off center position as ((right fitx at the bottom + left fitx at the bottom) - 1280) / 2 and calibrates it using the meters per pixel values which in my case are approximately xm_per_pix=0.0062, ym_per_pix=0.035.
 * the curvature is simply the average of the obtained curvatures for the left and right Lines. 
 
 The add_text() function also displays the text on the image.
